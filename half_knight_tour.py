@@ -11,7 +11,7 @@
 
 import numpy as np
 
-board = np.zeros((4, 8))
+board = np.zeros((3, 8))
 # board
 # array([[0., 0., 0., 0., 0., 0., 0., 0.],
 #        [0., 0., 0., 0., 0., 0., 0., 0.],
@@ -109,7 +109,7 @@ def start_moving(initial_coor, count):
     # mark current coordinate
     board[initial_coor[0], initial_coor[1]] = count
 
-    if count == 32:
+    if count == 24:
         return 'success'
 
     for next_coor in possible_moves[initial_coor[0], initial_coor[1]]:
