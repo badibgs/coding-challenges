@@ -9,10 +9,12 @@
 #
 
 
+
+
 import numpy as np
 
-board = np.zeros((4, 8))
-# board
+board = np.zeros((3, 8))
+# board        
 # array([[0., 0., 0., 0., 0., 0., 0., 0.],
 #        [0., 0., 0., 0., 0., 0., 0., 0.],
 #        [0., 0., 0., 0., 0., 0., 0., 0.],
@@ -109,7 +111,7 @@ def start_moving(initial_coor, count):
     # mark current coordinate
     board[initial_coor[0], initial_coor[1]] = count
 
-    if count == 32:
+    if count == 24 :
         return 'success'
 
     for next_coor in possible_moves[initial_coor[0], initial_coor[1]]:
@@ -132,9 +134,4 @@ for initial_coor in possible_moves.keys():
     if result == 'success':
         break
 
-print(board)
-
-# [[ 1. 28.  9. 22.  3. 26. 11. 20.]
-#  [16. 31.  2. 27. 10. 21.  4. 25.]
-#  [29.  8. 17. 14. 23.  6. 19. 12.]
-#  [32. 15. 30.  7. 18. 13. 24.  5.]]
+print (board) 
